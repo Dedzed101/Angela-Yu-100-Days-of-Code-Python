@@ -18,6 +18,5 @@ while machine_is_on:
 
     else:
         drink = mu.find_drink(choice)
-        if cm.is_resource_sufficient(drink):
-            mm.make_payment(drink.cost)
+        if cm.is_resource_sufficient(drink) and mm.make_payment(drink.cost):
             cm.make_coffee(drink)
