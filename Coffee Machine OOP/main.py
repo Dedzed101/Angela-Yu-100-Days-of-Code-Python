@@ -14,6 +14,7 @@ while machine_is_on:
 
     if choice == 'report':
         cm.report()
+        mm.report()
 
     else:
         drink = mu.find_drink(choice)
