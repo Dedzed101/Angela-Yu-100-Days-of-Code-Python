@@ -1,10 +1,12 @@
 from turtle import *
+import turtle as t
 import random
 
-tt = Turtle()
+tt = t.Turtle()
+t.colormode(255)
 tt.shape('turtle')
 tt.pensize(7)
-tt.speed('slow')
+tt.speed('fast')
 
 colors = ['red', 'orange', 'gold1', 'green',
           'blue', 'indigo', 'violet', 'black']
@@ -19,19 +21,18 @@ def random_color():
     return random_color
 
 
-for i in range(200):
-    tt.color(random_color())
-    tt.forward(30)
+# for i in range(200):
+#     tt.color(random_color())
+#     tt.forward(30)
+#     tt.setheading(random.choice(directions))
+while True:
+    # with a random color
+    tt.pencolor(random_color())
+    # set turtle to move forward a radnom number fo steps
+    # tt.forward(30) for hardcoded distance
+    tt.forward(random.randint(1, 100))
+    # set turtle to turn either right or left (at random) a radnom number fo degrees and move forward
     tt.setheading(random.choice(directions))
 
-# while True:
-#     # with a random color
-#     tt.color(random_color())
-#     # set turtle to move forward a radnom number fo steps
-#     # tt.forward(30) for hardcoded distance
-#     tt.forward(random.randint(1, 100))
-#     # set turtle to turn either right or left (at random) a radnom number fo degrees and move forward
-#     tt.setheading(random.choice(directions))
-
-screen = Screen()
-screen.exitonclick()
+# screen = Screen()
+# screen.exitonclick()
