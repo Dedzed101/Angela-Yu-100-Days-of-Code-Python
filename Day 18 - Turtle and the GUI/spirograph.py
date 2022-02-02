@@ -20,10 +20,8 @@ def random_color():
 
 
 def draw_spirograph(size_of_gap):
-    """[summary]
-
-    Args:
-        size_of_gap ([type]): [description]
+    """
+    Generates a series of randomly colored circles
     """
     for i in range(int(360 / size_of_gap)):
         tt.color(random_color())
